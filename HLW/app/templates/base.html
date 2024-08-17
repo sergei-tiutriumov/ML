@@ -1,16 +1,27 @@
 <html>
+
     <head>
+        {% block head %}
         {% if title %}
         <title>{{ title }} - Microblog </title>
         {% else %}
         <title> Welcome to Упячка! </title>
         {% endif %}
+        {% block styles %}
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/myblog.css')}}">
+        {% endblock %}
+        {% endblock %}
     </head>
+
+
     <body>
-        <div>
+        <div id="header">
             Microblog:
              <a href= "{{ url_for('index') }}">Home</a>
              <a href= "{{ url_for('login') }}">Login</a>
+        </div>
+        <div id="content">
+            {% block content %} {% endblock %}
         </div>
         <hr>
         {% with messages = get_flashed_messages() %}
@@ -22,6 +33,14 @@
         </ul>
         {% endif%}
         {%endwith%}
-        {% block content %}{% endblock %}
+        <div id="footer">
+            {% block footer %}
+            <h4>&copy; Живтоне чачо упячка</h4>
+            {% endblock %}
+        </div>
     </body>
+
+    
+    {% block scripts %} {% endblock %}
+
 </html>

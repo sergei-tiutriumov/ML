@@ -1,0 +1,49 @@
+html, body {
+    height: 100%
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+#header h1 {
+    margin: 0px;
+    background-color: darkcyan;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+}
+
+#content {
+    flex: 1 0 auto; 
+    margin: 20 px;
+}
+
+#content h2 {
+    border: 3px solid lightslategray;
+    border-radius: 1px;
+    padding: 20 px;
+    text-align: center;
+    background-color: bisque;
+    display: inline-block;
+    justify-content: center; 
+    place-items: center;
+    position: relative;
+    left: 500px; 
+    left: 
+}
+
+#footer {
+    flex-shrink: 0;
+}
+
+#footer h4 {
+    margin: 0 px;
+    background-color: lightgray;
+    height: 50 px;
+    text-align: center;
+    line-height: 50px;
+}
